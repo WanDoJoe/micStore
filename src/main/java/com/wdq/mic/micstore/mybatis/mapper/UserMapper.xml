@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wdq.mic.micstore.mybatis.imple.IUserMapper">
+    
+    <select id="login" resultType="com.wdq.mic.micstore.bean.UserBean">
+        select * from t_user u where u.loginname=#{arg0} and u.password=#{arg1}
+    </select>
+
+    <insert id="add" parameterType="com.wdq.mic.micstore.bean.UserBean">
+       insert into t_user (username,password,date) value (#{username},#{password},#{date})
+    </insert>
+
+    <!--<insert id="loginlog" parameterType="com.wdq.micorestore.bean.LoginLogBean">-->
+        <!--INSERT INTO login_log (uid,data,drviceNum,SystemType,appVersion,SystemVersion,SystemModel,DeviceBrand)-->
+                      <!--VALUES-->
+                    <!--(#{uid},#{data},#{drviceNum},#{SystemType},#{appVersion},#{SystemVersion},#{SystemModel},#{DeviceBrand})-->
+    <!--</insert>-->
+    <!--<select id="loginlogList" resultType="com.wdq.micorestore.bean.LoginLogBean">-->
+        <!--select * from login_log-->
+    <!--</select>-->
+</mapper>

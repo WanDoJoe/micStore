@@ -1,0 +1,26 @@
+#spring.datasource.url=jdbc:sqlite::resource:example.db
+#spring.datasource.url=jdbc:sqlite:C:/db/example.db
+#spring.datasource.username=
+#spring.datasource.password=
+#spring.datasource.driver-class-name=org.sqlite.JDBC
+#
+#mybatis.typeAliasesPackage=org.spring.springboot.domain
+#mybatis.mapperLocations=classpath:mapper/*.xml
+#
+#server.port=8888
+
+spring:
+      datasource:
+        url: jdbc:sqlite::resource:db/micStore.db
+        username:
+        password:
+        driver-class-name: org.sqlite.JDBC
+
+
+
+mybatis:
+  configLocation: classpath:MyBatisConf.xml
+#       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapperLocations: classpath:mapper/*Mapper.xml
+  typeAliasesPackage: com.wdq.micorestore.bean.*
+#  configuration:
