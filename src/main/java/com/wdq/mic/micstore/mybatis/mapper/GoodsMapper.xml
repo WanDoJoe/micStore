@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wdq.mic.micstore.mybatis.imple.IGoodsMapper">
+    
+    <select id="findAll" resultType="com.wdq.mic.micstore.bean.GoodsBean">
+        select * from t_goods g
+    </select>
+
+    <select id="findGoodsByParams" resultType="com.wdq.mic.micstore.bean.GoodsBean">
+
+        /* 通过 产品名，价格，编码，产品类型  参数模糊查询相关信息 */
+
+    </select>
+
+    <insert id="addGoods" parameterType="com.wdq.mic.micstore.bean.GoodsBean">
+       insert into t_goods(goods_name, createdate, goods_code,
+        infomation, img_id, size_id,
+         price, isAble, sale,type,codenumb,class)
+       values (#{goods_name},#{createdate}, #{goods_code},
+        #{infomation}, #{img_id}, #{size_id},
+         #{price}, #{isAble}, #{sale},#{type},#{codenumb},#{class})
+
+    </insert>
+
+    <update id="updateGoods">
+
+    </update>
+
+    <!--<insert id="loginlog" parameterType="com.wdq.micorestore.bean.LoginLogBean">-->
+        <!--INSERT INTO login_log (uid,data,drviceNum,SystemType,appVersion,SystemVersion,SystemModel,DeviceBrand)-->
+                      <!--VALUES-->
+                    <!--(#{uid},#{data},#{drviceNum},#{SystemType},#{appVersion},#{SystemVersion},#{SystemModel},#{DeviceBrand})-->
+    <!--</insert>-->
+    <!--<select id="loginlogList" resultType="com.wdq.micorestore.bean.LoginLogBean">-->
+        <!--select * from login_log-->
+    <!--</select>-->
+</mapper>

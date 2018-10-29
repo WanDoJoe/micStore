@@ -11,7 +11,8 @@
 
 spring:
       datasource:
-        url: jdbc:sqlite::resource:db/micStore.db
+        url: jdbc:sqlite:H:/MyWorkSpace/IDEAWorkSpace/micstore/src/main/resources/db\mymicdb
+#        url: jdbc:sqlite:classpath:mymicdb
         username:
         password:
         driver-class-name: org.sqlite.JDBC

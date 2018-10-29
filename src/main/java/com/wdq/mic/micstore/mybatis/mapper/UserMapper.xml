@@ -4,11 +4,11 @@
 <mapper namespace="com.wdq.mic.micstore.mybatis.imple.IUserMapper">
     
     <select id="login" resultType="com.wdq.mic.micstore.bean.UserBean">
-        select * from t_user u where u.loginname=#{arg0} and u.password=#{arg1}
+        select * from t_user u where u.username=#{arg0} and u.password=#{arg1}
     </select>
 
     <insert id="add" parameterType="com.wdq.mic.micstore.bean.UserBean">
-       insert into t_user (username,password,date) value (#{username},#{password},#{date})
+       insert into t_user (username,password,date) values (#{username},#{password},#{date})
     </insert>
 
     <!--<insert id="loginlog" parameterType="com.wdq.micorestore.bean.LoginLogBean">-->

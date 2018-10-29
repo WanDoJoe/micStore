@@ -11,12 +11,15 @@
         <!--<typeAlias type="com.wdq.micorestore.bean.UserBean" alias="UserBean"></typeAlias>-->
         <!--<typeAlias type="com.wdq.micorestore.bean.GoodsBean" alias="GoodsBean"></typeAlias>-->
         <!--<typeAlias type="com.wdq.micorestore.bean.LoginLogBean" alias="LoginLogBean"></typeAlias>-->
+       <typeAlias type="com.wdq.mic.micstore.bean.UserBean" alias="UserBean"></typeAlias>
+        <typeAlias type="com.wdq.mic.micstore.bean.GoodsBean" alias="GoodsBean"></typeAlias>
    </typeAliases>  
    <!-- 配置Mapper文件的路径 -->
    <mappers>
        <!--<mapper resource="com/wdq/micorestore/mybaits/mapper/GoodsMapper.xml"></mapper>-->
        <!--<mapper resource="com/wdq/micorestore/mybaits/mapper/UserMapper.xml"></mapper>-->
-       <!--<mapper resource="com/wdq/micorestore/mybaits/mapper/GoodsMapper.xml"></mapper>-->
+       <mapper resource="com/wdq/mic/micstore/mybatis/mapper/UserMapper.xml"></mapper>
+       <mapper resource="com/wdq/mic/micstore/mybatis/mapper/GoodsMapper.xml"></mapper>
 
    </mappers>
 </configuration>
